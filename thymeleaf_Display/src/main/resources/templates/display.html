@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Employee Details</h3>
+<hr>
+<table border="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="tempEmployee:${employee}">
+<td th:text=${tempEmployee.name}/>
+<td th:text=${tempEmployee.email}/>
+<td th:text=${tempEmployee.salary}/>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
